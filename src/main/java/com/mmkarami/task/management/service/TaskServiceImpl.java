@@ -26,7 +26,7 @@ public class TaskServiceImpl implements TaskService {
 	}
 
 	@Override
-	public List<TaskDto> getAllTasks() {UUID
+	public List<TaskDto> getAllTasks() {
 		List<Task> tasks = taskDao.findAll();
 		return tasks.stream().map(task -> modelMapper.map(task, TaskDto.class)).collect(Collectors.toList());
 	}
